@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstra')}}">
+{% block title -%}
+{% if title %}
+	<title>Семинар 3 фласк - {{title}}</title>
+{% else %}
+	<title>Семинар 3 фласк</title>
+{% endif %}
+{% endblock %}
+</head>
+<body>
+{% block content -%}
+	{%- block mainmenu -%}
+<ul class="mainmenu">
+{% for p in menu %}
+	<li><a href="{{p.url}}">{{p.title}}</a></li>
+{% endfor %}
+</ul>
+	{% endblock mainmenu -%}
+<div class="clear"></div>
+<div class="content">
+	{% if title -%}
+<h1>{{title}}</h1>
+	{% else -%}
+<h1>Vitaly8414</h1>
+	{% endif -%}
+{% endblock -%}
+</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+        {% extends 'base.html' %}
+        
+        {% block title %}
+        Регистрация
+        {% endblock %}
+    </title>
+</head>
+<body>
+    <h1>Регистрация</h1>
+    <form method="POST" action="/register">
+        {{ form.hidden_tag() }}
+        {{ form.first_name.label }} {{ form.first_name() }}<br>
+        {{ form.last_name.label }} {{ form.last_name() }}<br>
+        {{ form.email.label }} {{ form.email() }}<br>
+        {{ form.password.label }} {{ form.password() }}<br>
+        <input type="submit" value="Зарегистрироваться">
+    </form>
+</body>
+</html>
+
